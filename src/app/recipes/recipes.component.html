@@ -1,0 +1,8 @@
+<h2>Recipe List</h2>
+
+<ul class="recipes">
+  <li *ngFor="let x of recipes" [class.selected]= 'x === selectedRecipe'(click)="onSelect(x)">
+    {{x.title}}
+  </li>
+</ul>
+<app-recipe-detail [recipe]="selectedRecipe"></app-recipe-detail>

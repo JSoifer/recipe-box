@@ -1,0 +1,14 @@
+<div *ngIf='recipe'>
+  <div><span>Recipe: </span>{{recipe.title}}</div>
+  <ul class="recipes"> Ingredients:
+    <li *ngFor="let y of recipe.ingredients">
+      {{y}}
+    </li>
+  </ul>
+  <div><span>Directions: </span>{{recipe.directions}}</div>
+  <div>
+    <label>Edit Directions:
+      <input class="changeData" [(ngModel)] = "recipe.directions" placeholder="directions">
+    </label>
+  </div>
+</div>
