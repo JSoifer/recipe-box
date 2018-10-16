@@ -1,0 +1,8 @@
+<h3>Top Recipes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let x of recipes" class="col-1-4" routerLink="/detail/{{x.title}}">
+    <div class="module recipe">
+      <h4>{{x.title}}</h4>
+    </div>
+  </a>
+</div>

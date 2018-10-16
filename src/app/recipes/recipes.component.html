@@ -1,8 +1,9 @@
 <h2>Recipe List</h2>
 
 <ul class="recipes">
-  <li *ngFor="let x of recipes" [class.selected]= 'x === selectedRecipe'(click)="onSelect(x)">
-    {{x.title}}
+  <li *ngFor="let x of recipes">
+    <a routerLink="/detail/{{x.title}}">
+      {{x.title}}
+    </a>
   </li>
 </ul>
-<app-recipe-detail [recipe]="selectedRecipe"></app-recipe-detail>
